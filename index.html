@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuraLens — Visual Exploration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Branded Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <h1 class="logo">AuraLens</h1>
+      <p class="tagline">Discover high-resolution open imagery and artistic inspiration.</p>
+
+      <!-- Search Form -->
+      <form id="search-form" class="search-form">
+        <div class="input-group">
+          <label for="search-input" class="sr-only">Search images</label>
+          <input 
+            id="search-input" 
+            type="search" 
+            placeholder="Search high-res photos, art, textures..." 
+            required 
+          />
+          <button id="search-btn" type="submit">Search</button>
+        </div>
+      </form>
+
+      <!-- Original Feature 1: Category Chips -->
+      <div class="category-chips">
+        <span class="chip-label">Suggestions:</span>
+        <button type="button" class="chip">Abstract</button>
+        <button type="button" class="chip">Architecture</button>
+        <button type="button" class="chip">Nature</button>
+        <button type="button" class="chip">Minimalism</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-container">
+    <!-- Result Status / Count Placeholder -->
+    <p id="status" class="status-text"></p>
+
+    <!-- Original Feature 2: Empty State Message -->
+    <div id="empty-state" class="empty-state">
+      <div class="empty-icon">✨</div>
+      <h2>Begin Your Exploration</h2>
+      <p>Type a topic in the search bar above or choose a suggestion chip to start discovering visual content.</p>
+    </div>
+
+    <!-- Empty Results Container (Target for Part 2) -->
+    <section id="results" class="results-grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
